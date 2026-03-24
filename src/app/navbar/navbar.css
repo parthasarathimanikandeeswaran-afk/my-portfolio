@@ -1,0 +1,86 @@
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 8%;
+  background: #0f172a;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+/* LOGO */
+.nav-logo {
+  height: 90px; /* FIXED */
+}
+
+/* LINKS */
+.nav-link-container {
+  display: flex;
+  gap: 25px;
+}
+
+/* LINKS STYLE */
+.nav-link-container a {
+  text-decoration: none;
+  color: white;
+  font-size: 15px;
+  position: relative;
+  transition: 0.3s;
+}
+
+/* HOVER EFFECT */
+.nav-link-container a:hover {
+  color: #38bdf8;
+}
+
+/* UNDERLINE ANIMATION */
+.nav-link-container a::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  background: #38bdf8;
+  left: 0;
+  bottom: -4px;
+  transition: 0.3s;
+}
+
+.nav-link-container a:hover::after {
+  width: 100%;
+}
+
+/* ===== MOBILE MENU BUTTON ===== */
+.menu-toggle {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ===== MOBILE RESPONSIVE ===== */
+@media (max-width: 768px) {
+
+  .menu-toggle {
+    display: block;
+  }
+
+  .nav-link-container {
+    position: absolute;
+    top: 65px;
+    right: 0;
+    background: #0f172a;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-link-container.active {
+    display: flex;
+  }
+
+  .nav-link-container a {
+    margin: 10px 0;
+  }
+}

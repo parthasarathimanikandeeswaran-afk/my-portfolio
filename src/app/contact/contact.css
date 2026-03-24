@@ -1,0 +1,98 @@
+.contact {
+  padding: 80px 10%;
+  background: #020617;
+  color: white;
+  text-align: center;
+  min-height: 60vh; /* FIXED */
+}
+
+/* BOX */
+.contact-box {
+  max-width: 600px;
+  margin: auto;
+
+  /* animation */
+  opacity: 0;
+  transform: translateY(40px);
+  animation: fadeUp 1s ease forwards;
+}
+
+/* TEXT */
+.text {
+  color: #cbd5f5;
+  margin-bottom: 20px;
+  font-size: 16px;
+}
+
+/* DETAILS */
+.contact-details {
+  margin-bottom: 30px;
+}
+
+.contact-details p {
+  margin: 12px 0;
+  font-size: 15px;
+}
+
+/* LINKS */
+.contact-details a {
+  color: #38bdf8;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.contact-details a:hover {
+  text-decoration: underline;
+  color: #60d4ff;
+}
+
+/* BUTTON */
+.btn.primary {
+  margin-top: 20px;
+  background: #38bdf8;
+  color: black;
+  padding: 10px 20px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn.primary:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 15px #38bdf8;
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===== TABLET ===== */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 5%;
+  }
+}
+
+/* ===== MOBILE ===== */
+@media (max-width: 480px) {
+  .text {
+    font-size: 14px;
+  }
+
+  .contact-details p {
+    font-size: 14px;
+  }
+
+  .btn.primary {
+    width: 100%;
+  }
+}

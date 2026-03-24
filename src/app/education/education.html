@@ -1,0 +1,13 @@
+<div class="education-section" id="education">
+
+  <h2 class="section-title">🎓 Education</h2>
+
+<div class="education-container">
+<div class="education-card" *ngFor="let i of education">
+  <h3>{{i.IsSchool ? '🏫' : '🎓'}} {{ i.title }}</h3>
+  <p><strong>Course:</strong> {{ i.course }}</p>
+  <p><strong>{{ i.IsSchool ? 'School' : 'College' }}:</strong> {{ i.place }}</p>
+  <p><strong>Year:</strong> {{ i.year }}</p>
+  <p><strong>Percentage:</strong> {{ i.percentage }}</p>
+</div>
+</div>
